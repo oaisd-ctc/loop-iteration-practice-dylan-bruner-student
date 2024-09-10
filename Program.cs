@@ -56,3 +56,21 @@ void FindSumOfOddNumbers(int n) {
     }
     Console.WriteLine(sum);
 }
+
+void OutofRangeMessage(int n) {
+    Console.WriteLine($"{n} is out of range.");
+}
+
+void OutputRightTriangle(int n) {
+    int start = n > 0 ? 1 : n;
+    int end = n > 0 ? n+1 : 0;
+
+    for (int x=start; x != end; x++) {
+        for (int b=0; b < Math.Abs(x); b++)
+            Console.Write("*");
+        Console.WriteLine();
+    }
+}
+
+OutputRightTriangle(-4);
+OutputRightTriangle(4);
